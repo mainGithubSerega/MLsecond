@@ -281,3 +281,57 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   margin-top: 17px;
   color: #08C237;
 }
+
+@media (max-width: 1280px) {
+  .main-content__who {
+    font-size: 120px;
+  }
+  .main-content__text {
+    font-size: 48px;
+  }
+  .main-content__do {
+    font-size: 30px;
+  }
+  .main-content__win {
+    font-size: 30px;
+  }
+  .main-content__money {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 790px) {
+  .main-content__who {
+    font-size: 76px;
+  }
+  .main-content__text {
+    font-size: 30px;
+  }
+  .main-content__do {
+    font-size: 19px;
+  }
+  .main-content__win {
+    font-size: 19px;
+  }
+  .main-content__money {
+    font-size: 76px;
+  }
+}
+
+@media (max-width: 510px) {
+  .main-content__who {
+    font-size: 45px;
+  }
+  .main-content__text {
+    font-size: 18px;
+  }
+  .main-content__do {
+    font-size: 11px;
+  }
+  .main-content__win {
+    font-size: 11px;
+  }
+  .main-content__money {
+    font-size: 45px;
+  }
+}
