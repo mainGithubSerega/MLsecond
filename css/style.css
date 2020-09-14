@@ -1,0 +1,283 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Gilroy';
+  src: local("Gilroy-HeavyItalic"), local("Gilroy-HeavyItalic"), url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("../fonts/Gilroy-HeavyItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local("Gilroy-SemiboldItalic"), local("Gilroy-SemiboldItalic"), url("../fonts/Gilroy-SemiboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto-Regular"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Gilroy';
+}
+
+.wrap {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1340px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/**
+ * Сброс стилей
+ **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+article, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+input {
+  outline: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 52px 0;
+  box-sizing: border-box;
+  background: url("../images/main-bg.jpg") no-repeat center/cover;
+  position: relative;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  background: radial-gradient(50% 50% at 50% 50%, #0A7328 0%, #041C0C 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.88;
+  z-index: 1;
+}
+
+.main-pattern {
+  width: 68.2%;
+  height: 810px;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-pattern img {
+  max-width: 100%;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+
+.main-header__logo {
+  display: block;
+  width: 160px;
+  height: 34px;
+  padding-right: 50px;
+}
+
+.main-header__logo img {
+  max-width: 100%;
+}
+
+.main-menu__icons {
+  display: flex;
+  align-items: center;
+}
+
+.main-menu__icons li {
+  margin-right: 20px;
+}
+
+.main-menu__icons li:last-child {
+  margin: 0;
+}
+
+@media (max-width: 380px) {
+  .main-menu__svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+
+.main-menu__svg01 {
+  width: 21px;
+  height: 21px;
+}
+
+.main-menu__svg02 {
+  width: 21px;
+  height: 12px;
+}
+
+.main-menu__svg03 {
+  width: 21px;
+  height: 21px;
+}
+
+.main-menu__svg04 {
+  width: 22px;
+  height: 18px;
+}
+
+.main-content {
+  text-align: center;
+}
+
+.main-content__img {
+  max-width: 212px;
+  margin: 0 auto 5px;
+  height: 204px;
+}
+
+@media (max-width: 1700px) {
+  .main-content__img {
+    max-width: 150px;
+    height: 140px;
+  }
+}
+
+.main-content__img img {
+  display: block;
+  max-width: 100%;
+}
+
+.main-content__textWho {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  align-items: center;
+}
+
+.main-content__who {
+  font-size: 142px;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.main-content__text {
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-style: italic;
+  text-align: left;
+}
+
+.main-content__text span {
+  display: block;
+}
+
+.main-content__prognoz {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.main-content__do {
+  background-color: #08C237;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  padding: 7px 10px;
+  transform: skew(-10deg);
+  margin-right: 7px;
+}
+
+.main-content__do div {
+  transform: skew(10deg);
+}
+
+.main-content__win {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.main-content__money {
+  font-size: 142px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: 17px;
+  color: #08C237;
+}
