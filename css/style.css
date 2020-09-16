@@ -47,6 +47,10 @@ html, body {
   border: 1px solid #009A17;
 }
 
+.span {
+  color: #08C237;
+}
+
 /**
  * Сброс стилей
  **/
@@ -270,6 +274,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   .main-content__money {
     font-size: 120px;
   }
+  .main-content {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 790px) {
@@ -292,6 +299,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     max-width: 130px;
     height: 120px;
     margin-bottom: 12px;
+  }
+  .main {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-bottom: 0;
   }
 }
 
@@ -360,19 +376,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   background-color: #010302;
 }
 
+.block-match__shadow {
+  margin: -40px 0 0 0;
+}
+
 .block-match__title {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 36px;
   line-height: 42px;
   margin: 0 auto 23px auto;
-  transform: translateY(-38%);
   max-width: 710px;
   text-align: center;
 }
 
-.block-match__title span {
-  color: #08C237;
+.block-match__subtitle {
+  display: block;
+  color: #fff;
 }
 
 .block-match__body {
@@ -446,12 +466,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   flex-direction: column;
 }
 
+@media (max-width: 1280px) {
+  .block-match__title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
 @media (max-width: 768px) {
   .block-match__column {
     flex: 0 1 190px;
   }
   .block-match__item {
     padding: 27px 0;
+  }
+  .block-match__title {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  .block-match__shadow {
+    margin: 0;
+    padding: 10px 0 0 0;
   }
 }
 
@@ -473,5 +508,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     font-size: 11px;
     height: 20px;
     line-height: 20px;
+  }
+  .block-match__shadow {
+    padding: 0;
+    margin: -40px 0 0 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .block-match__subtitle {
+    display: initial;
+    line-height: 18px;
   }
 }
