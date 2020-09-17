@@ -20,6 +20,41 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'PT';
+  src: local("FontsFree-Net-SFProDisplay-LightItalic"), local("FontsFree-Net-SFProDisplay-LightItalic"), url("../fonts/FontsFree-Net-SFProDisplay-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT';
+  src: local("SFProDisplay-Light"), local("SFProDisplay-Light"), url("../fonts/SFProDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT';
+  src: local("SFProDisplay-Bold"), local("SFProDisplay-Bold"), url("../fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT';
+  src: local("SFProDisplay-Semibold"), local("SFProDisplay-Semibold"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT';
+  src: local("SFProDisplay-Medium"), local("SFProDisplay-Medium"), url("../fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
 html, body {
   height: 100%;
   font-family: 'Gilroy';
@@ -30,6 +65,7 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #000000;
 }
 
 .container {
@@ -127,9 +163,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   position: relative;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 420px) {
   .main {
-    background-position: -165px 0;
+    background: url("../images/main-bgForPhone.jpg") no-repeat top/cover;
   }
 }
 
@@ -270,6 +306,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   color: #08C237;
 }
 
+@media (max-width: 1440px) {
+  .main-content {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 1280px) {
   .main-content__who {
     font-size: 120px;
@@ -326,10 +368,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     margin-bottom: 0;
   }
   .main {
-    padding: 30px 0 0 0;
-  }
-  .block-match {
-    padding: 32px 0 0 0;
+    padding: 30px 0 40px 0;
   }
 }
 
@@ -588,6 +627,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   transition: 0.2s linear;
 }
 
+@media (max-width: 1920px) {
+  .block-match__shadow {
+    margin: -85px 0 0 0;
+  }
+}
+
+@media (max-width: 1720px) {
+  .block-match__shadow {
+    margin: -40px 0 0 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .block-match__shadow {
+    margin: -15px 0 0 0;
+  }
+}
+
 @media (max-width: 1280px) {
   .block-match__title {
     font-size: 30px;
@@ -607,6 +664,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     height: 25px;
     line-height: 25px;
     font-size: 13px;
+  }
+  .block-match__text {
+    font-size: 30px;
   }
 }
 
@@ -658,6 +718,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     padding: 0;
     margin: -40px 0 0 0;
   }
+  .block-match__text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -688,4 +751,57 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .footer__text--attention {
   background: url("../images/attention.svg") left no-repeat;
   padding: 0 0 0 40px;
+}
+
+.block-popup {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.block-popup__popup {
+  background-color: #fff;
+  flex: 0 1 900px;
+  height: 80%;
+  padding: 30px 48px 60px 80px;
+  box-sizing: border-box;
+  font-family: 'PT';
+}
+
+.block-popup__fixed {
+  height: 900px;
+  overflow: auto;
+}
+
+.block-popup__title {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.block-popup__need {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 26px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.block-popup__rule {
+  color: #000000;
+}
+
+.block-popup__rule p {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 26px;
+  margin-bottom: 30px;
 }
