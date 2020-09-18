@@ -832,7 +832,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   }
 }
 
-@media (max-width: 335px) {
+@media (max-width: 400px) {
   .block-popup__close {
     right: 35px;
   }
@@ -878,6 +878,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 .block-popup__fixed::-webkit-scrollbar-thumb {
   background: #129A48;
+}
+
+@media (max-width: 450px) {
+  .block-popup__fixed::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .block-popup__title {
@@ -1134,6 +1140,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .block-popup__btn div {
   transform: skew(10deg);
 }
+
 .hide {
   display: none;
 }
