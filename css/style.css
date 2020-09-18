@@ -324,6 +324,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   color: #08C237;
 }
 
+@media (max-width: 1920px) {
+  .main-content {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .main-content {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 1440px) {
   .main-content {
     margin-bottom: 20px;
@@ -1122,7 +1134,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .block-popup__btn div {
   transform: skew(10deg);
 }
-
 .hide {
   display: none;
 }
