@@ -766,18 +766,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   align-items: flex-end;
 }
 
+.block-popup__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .block-popup__popup {
   background-color: #fff;
   flex: 0 1 900px;
-  height: 80%;
-  padding: 30px 48px 60px 80px;
-  box-sizing: border-box;
   font-family: 'PT';
+  position: relative;
+}
+
+.block-popup__popup span {
+  color: #0A9F30;
+  text-decoration: underline;
+}
+
+.block-popup__rules {
+  margin-bottom: 30px;
+}
+
+.block-popup__ex {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  color: #333333;
+  margin-bottom: 30px;
 }
 
 .block-popup__fixed {
-  height: 900px;
+  height: 600px;
   overflow: auto;
+  padding: 30px 48px 60px 80px;
+  box-sizing: border-box;
+}
+
+.block-popup__desc {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  color: #333333;
+  margin-bottom: 30px;
+  line-height: 27px;
 }
 
 .block-popup__title {
@@ -787,12 +821,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   margin-bottom: 30px;
 }
 
-.block-popup__need {
+.block-popup__text {
   font-weight: 300;
   font-style: normal;
   font-size: 26px;
   color: #000000;
   margin-bottom: 30px;
+  line-height: 30px;
+}
+
+.block-popup__players {
+  margin-bottom: 30px;
+}
+
+.block-popup__player {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  color: #333333;
+  line-height: 27px;
+}
+
+.block-popup__player:last-child {
+  margin: 0;
+}
+
+.block-popup__places {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 26px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 30px;
+}
+
+.block-popup__article {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  color: #333333;
+  line-height: 27px;
 }
 
 .block-popup__rule {
@@ -804,4 +872,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   font-style: normal;
   font-size: 26px;
   margin-bottom: 30px;
+}
+
+.block-popup__rule p:last-child {
+  margin: 0;
+}
+
+.block-popup__rule1 {
+  position: relative;
+}
+
+.block-popup__rule1::before {
+  content: '1';
+  top: 0;
+  left: -50px;
+  position: absolute;
+  font-weight: 500;
+  font-family: 'PT';
+  font-size: 48px;
+  color: #000000;
+  z-index: 22;
+}
+
+.block-popup__rule2 {
+  position: relative;
+}
+
+.block-popup__rule2::before {
+  content: '2';
+  top: 0;
+  left: -50px;
+  position: absolute;
+  font-weight: 500;
+  font-family: 'PT';
+  font-size: 48px;
+  color: #000000;
+  z-index: 22;
+}
+
+.hide {
+  display: none;
 }
