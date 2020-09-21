@@ -1,24 +1,25 @@
-function toggle (columns) {
-    const items = document.querySelectorAll(columns)  
+function popup (startSel, popapSel, closeSel) {
+    const startBtn = document.querySelector(startSel),
+          modal = document.querySelector(popapSel),
+          finishBtn = document.querySelector(closeSel),
+          body = document.body
 
-    items.forEach(item => {
-        item.addEventListener('click', function(e){
-            e.preventDefault()
-        })
+    startBtn.addEventListener('click', function(e){
+        e.preventDefault()
+        body.classList.add('lock')
+        modal.classList.remove('hide')
+    })
+    finishBtn.addEventListener('click', function(e){
+        e.preventDefault()
+        body.classList.remove('lock')
+        modal.classList.add('hide')
+    })
+    modal.addEventListener('click', function(e){
+        if(e.target.classList.contains('block-popup')){
+            body.classList.remove('lock')
+            modal.classList.add('hide')
+        }
     })
 }
-toggle('.block-match__item');
-const btn = document.querySelector('.footer__text')
-const popap = document.querySelector('.block-popup')
-const body = document.body
-btn.addEventListener('click', function(e){
-    e.preventDefault()
-    popap.classList.remove('hide')
-    body.classList.add('lock')
-})
-const close = document.querySelector('.block-popup__close')
-close.addEventListener('click', function(){
-    popap.classList.add('hide')
-    body.classList.remove('lock')
-});
+popup('.footer__text', '.block-popup', '.block-popup__close');
 
